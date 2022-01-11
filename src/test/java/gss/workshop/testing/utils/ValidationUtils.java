@@ -24,4 +24,20 @@ public class ValidationUtils {
   public static void validateStringEqual(Object expectedStr, Object actualStr) {
     Assert.assertEquals(expectedStr, actualStr);
   }
+
+  /**
+   * True value validation
+   *
+   * @param str expected value
+   */
+  public static void validateTrueValue(boolean str) {
+    Assert.assertTrue(str);
+  }
+
+  /**
+   * False value validation
+   *
+   * @param str expected value
+   */
+  public static void validateFalseValue(boolean str) { Assert.assertFalse(str); }
 }

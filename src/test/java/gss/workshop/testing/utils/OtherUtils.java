@@ -11,4 +11,10 @@ public class OtherUtils {
     logger.info(String.format("Random text: %s", name));
     return name;
   }
+
+  public static String randomCardName() {
+    String name = "My number task " + (int) (Math.random() * 10000);
+    logger.info(String.format("Random text: %s", name));
+    return name;
+  }
 }
