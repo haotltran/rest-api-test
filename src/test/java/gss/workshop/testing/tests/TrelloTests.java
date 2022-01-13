@@ -2,6 +2,7 @@ package gss.workshop.testing.tests;
 
 import gss.workshop.testing.pojo.board.BoardCreationRes;
 import gss.workshop.testing.pojo.card.CardCreationRes;
+import gss.workshop.testing.pojo.card.CardUpdateRes;
 import gss.workshop.testing.pojo.list.ListCreationRes;
 import gss.workshop.testing.requests.RequestFactory;
 import gss.workshop.testing.utils.ConvertUtils;
@@ -96,8 +97,8 @@ public class TrelloTests extends TestBase {
     ValidationUtils.validateStatusCode(resCardModification, 200);
 
     // VP. Validate the card should have new list: list id
-    CardCreationRes updatedCard =
-            ConvertUtils.convertRestResponseToPojo(resCardModification, CardCreationRes.class);
+    CardUpdateRes updatedCard =
+            ConvertUtils.convertRestResponseToPojo(resCardModification, CardUpdateRes.class);
     ValidationUtils.validateStringEqual(listId_02, updatedCard.getIdList());
 
     // VP. Validate the card should preserve properties: name task, board Id, "closed" property
